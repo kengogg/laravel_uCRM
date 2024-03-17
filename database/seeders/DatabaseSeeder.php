@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         $items = \App\Models\Item::all();
 
-        Purchase::factory(100)->create()
+        Purchase::factory(30000)->create()
             ->each(
                 function (Purchase $purchase) use ($items) {
                     $purchase->items()->attach(
